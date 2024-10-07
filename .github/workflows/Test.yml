@@ -23,10 +23,6 @@ jobs:
         node-version: 20
         cache: 'npm'
     - name: Install Depencencies
-      run: npm install
-    - name: Start FrontEnd
-      run: npm run start
-    - name: Start BackEnd
-      run: npm run server
+      run: npm install    
     - name: Run Tests
       run: npm run test
