@@ -1,4 +1,4 @@
-name: Build and Test and Deploy ##comment
+name: Build and Test and Deploy
 on:
   push:
     branches: [ "master" ]
