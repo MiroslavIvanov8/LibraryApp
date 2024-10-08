@@ -43,8 +43,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set Production Host URL
-        run: echo "HOST=https://libraryapp-up6c.onrender.com" >> $GITHUB_ENV
+      - name: Replace the config settings
+        run: echo "export const settings = { host:\"http://localhost:3030\" };" > src/config.js
 
       - name: Deploying Front-End
         uses: JorgeLNJunior/render-deploy@v1.4.4
