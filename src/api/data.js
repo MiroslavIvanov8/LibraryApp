@@ -1,7 +1,9 @@
 import * as api from './api.js';
 
-const host = require('./config');
-api.settings.host = host;
+const { returnUrl } = require('./config');
+
+// Dynamically set the host
+api.settings.host = returnUrl();
 
 export const login = api.login;
 export const register = api.register;
