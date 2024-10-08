@@ -1,6 +1,5 @@
- const returnUrl = () => {
-    return 'https://libraryapp-up6c.onrender.com';
- }
-
- exports.returnUrl = returnUrl;
-
+const returnUrl = () => {
+    return process.env.HOST || 'http://localhost:3030';
+  }
+  
+  exports.returnUrl = returnUrl;
