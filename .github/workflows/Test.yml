@@ -45,8 +45,10 @@ jobs:
         service_id: ${{ secrets.MY_RENDER_SERVICE_ID_FRONT_END }}
         api_key: ${{ secrets.MY_RENDER_API_KEY }}
     - name: Log Front-End Deployment
-      run: echo "Deployed Front-End service"
-
+      run: |
+       echo "Deployed Front-End service"
+       github_deployment: true
+       
     - name: Deploying Back-End
       uses: JorgeLNJunior/render-deploy@v1
       with:
