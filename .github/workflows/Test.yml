@@ -40,17 +40,15 @@ jobs:
 
     steps:
     - name: Deploying Front-End
-      uses: JorgeLNJunior/render-deploy@v1
+      uses: JorgeLNJunior/render-deploy@v1.4.4
       with:
         service_id: ${{ secrets.MY_RENDER_SERVICE_ID_FRONT_END }}
         api_key: ${{ secrets.MY_RENDER_API_KEY }}
     - name: Log Front-End Deployment
-      run: |
-       echo "Deployed Front-End service"
-       github_deployment: true
-       
+      run: echo "Deployed Front-End service"
+
     - name: Deploying Back-End
-      uses: JorgeLNJunior/render-deploy@v1
+      uses: JorgeLNJunior/render-deploy@v1.4.4
       with:
         service_id: ${{ secrets.MY_RENDER_SERVICE_ID_BACK_END }}
         api_key: ${{ secrets.MY_RENDER_API_KEY }}
