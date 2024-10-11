@@ -20,5 +20,11 @@ jobs:
       with:
         node-version: 20.x
         cache: 'npm'
-    - name: Install dependencies
+    - name: Install Dependencies
       run: npm ci
+    - name: Start Frontend
+      run: npm run start:fe &
+    - name: Start Backend 
+      run : npm run start:be &
+    - name: Execute UI Tests
+      run: npm run tests:ui
