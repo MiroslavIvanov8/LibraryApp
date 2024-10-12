@@ -26,8 +26,8 @@ jobs:
     - name: Install Dependencies
       run: npm ci
 
-   ## - name: Update the config
-  ##  run : echo "export const settings = {host:\"http://localhost:3030\"};" > src/config.js 
+    - name: Update the config
+      run : echo "export const settings = {host:\"http://localhost:3030\"};" > src/config.js 
 
     - name: Start Frontend
       run: npm run start &
