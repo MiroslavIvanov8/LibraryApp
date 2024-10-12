@@ -14,19 +14,29 @@ jobs:
 
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout the code
+      uses: actions/checkout@v4
+
     - name: Use Node.js 20
       uses: actions/setup-node@v4
       with:
         node-version: 20.x
         cache: 'npm'
+
     - name: Install Dependencies
       run: npm ci
+
+   ## - name: Update the config
+  ##  run : echo "export const settings = {host:\"http://localhost:3030\"};" > src/config.js 
+
     - name: Start Frontend
       run: npm run start &
+
     - name: Start Backend 
       run : npm run server &
+
     - name: Install Playwright browser
       run: npx playwright install 
+
     - name: Execute UI Tests
       run: npm run test
